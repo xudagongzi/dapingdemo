@@ -1,0 +1,116 @@
+.drag  {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background:#ebf0ead9;
+    /* border: 1px solid rgb(236, 217, 217); */
+    /* border-radius: 5px; */
+    overflow: hidden;
+}
+.active {
+  z-index: 10
+}
+.active:hover{
+    opacity: 0.6;
+}
+ .drag .close {
+    visibility: hidden;
+    position: absolute;
+    height: 20px;
+    width:20px;
+    top: 0;
+    right: 0;
+}
+.active .close{
+    visibility: visible
+} 
+
+.drag .close{
+    color: #ff4949;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.drag  .dialog {
+    /* overflow: hidden; */
+    margin-bottom: -4px;   
+   /* 有问题 */
+}
+
+.drag  .resizeBR {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    cursor: nw-resize;
+
+}
+
+.drag  .resizeL,
+.drag  .resizeT,
+.drag  .resizeR,
+.drag  .resizeB,
+.drag  .resizeLT,
+.drag  .resizeTR,
+.drag  .resizeLB {
+    position: absolute;
+    background: rgb(238, 230, 230);
+    overflow: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.drag  .resizeL,
+.drag  .resizeR {
+    top: 0;
+    width: 5px;
+    height: 100%;
+    cursor: w-resize;
+}
+
+.drag  .resizeR {
+    right: 0;
+}
+
+.drag  .resizeT,
+.drag  .resizeB {
+    width: 100%;
+    height: 1px;
+    cursor: n-resize;
+}
+
+.drag  .resizeT {
+    top: 0;
+}
+
+.drag  .resizeB {
+    bottom: 0;
+}
+
+.drag  .resizeLT,
+.drag  .resizeTR,
+.drag  .resizeLB {
+    width: 8px;
+    height: 8px;
+    background: #FF0;
+}
+
+.drag  .resizeLT {
+    top: 0;
+    left: 0;
+    cursor: nw-resize;
+}
+
+.drag  .resizeTR {
+    top: 0;
+    right: 0;
+    cursor: ne-resize;
+}
+
+.drag  .resizeLB {
+    left: 0;
+    bottom: 0;
+    cursor: ne-resize;
+}
